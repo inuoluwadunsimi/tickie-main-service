@@ -1,15 +1,15 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 export async function connectDBForTesting() {
   try {
-    const dbUri = "mongodb://localhost:27017";
-    const dbName = "tickie_e2e_test";
+    const dbUri = 'mongodb://localhost:27017';
+    const dbName = 'tickie_e2e_test';
     await mongoose.connect(dbUri, {
       dbName,
       autoCreate: true,
     });
   } catch (error) {
-    console.log("DB connect error");
+    console.log('DB connect error');
   }
 }
 
@@ -18,6 +18,6 @@ export async function dropAndDisconnectDBForTesting() {
     await mongoose.connection.dropDatabase();
     await mongoose.connection.close();
   } catch (error) {
-    console.log("DB disconnect error");
+    console.log('DB disconnect error');
   }
 }

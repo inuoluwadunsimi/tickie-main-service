@@ -67,7 +67,7 @@ export const signUpE2E = () => {
         if (err) return done(err);
         expect(res.body).toHaveProperty('message', 'Invalid OTP');
         done();
-      })
+      });
   });
 
   // test for expired OTP
@@ -87,7 +87,7 @@ export const signUpE2E = () => {
         if (err) return done(err);
         expect(res.body).toHaveProperty('message', 'OTP has expired');
         done();
-      })
+      });
   });
 
   // sign uer up with data

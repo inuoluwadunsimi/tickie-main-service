@@ -7,5 +7,14 @@ export const userData = {
   password: 'Janetdoesnotloveyou234$',
   otp: faker.string.numeric(6),
   signUpAuthToken: faker.string.alphanumeric(32),
+  forgotPasswordAuthToken: faker.string.alphanumeric(32),
   authToken: faker.string.alphanumeric(32),
+};
+
+export const staticUserAuthData = {
+  email: 'fred@gmail.com',
+  fullName: 'Alade Victor',
+  password: 'Sapaistherealenemy12$',
+  recognisedDevices:['1234'],
+  user:'1234567890',
 };
